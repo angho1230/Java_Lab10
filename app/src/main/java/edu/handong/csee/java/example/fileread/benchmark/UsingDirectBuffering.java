@@ -18,7 +18,7 @@ public class UsingDirectBuffering {
         //-------------- Test reading 1 MB file. --------------------
         StopWatch.start();
         BufferedInputStream inputStream= new BufferedInputStream(new FileInputStream(new File(DumpDataWriter.input1MB)));
-        byte[] buffer= new byte[2048]; // 2KB
+        byte[] buffer= new byte[1024*200]; // 2KB
         while (inputStream.read(buffer)!=-1){} // 75 ms
         long duration = StopWatch.stop();
         System.out.println(duration);
